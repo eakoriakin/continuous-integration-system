@@ -8,18 +8,6 @@ The app uses feature based structure for source code and file type based structu
 # Demo
 A demo is hosted on Heroku ([here](https://frozen-ravine-6349.herokuapp.com/#/home)).
 
-# Installation
-To install the app locally follow the steps below:
-
-1. Clone the repository.
-2. Open Bash from the app's directory.
-3. Install app's dependencies by executing `npm install` command.
-4. Start the app using `gulp start` command. This also builds the app before starting.
-5. Open app's home page in your browser ([http://localhost:5000/#/hom](http://localhost:5000/#/home)).
-
-# Testing
-The app has a couple of tests. To run the tests execute `gulp unit-test`.
-
 # Supported browsers
 
 ## Desktop
@@ -35,3 +23,15 @@ The app has a couple of tests. To run the tests execute `gulp unit-test`.
 * Safari Mobile 7.1
 * IE Phone 11
 * Opera Mobile 12.10
+
+# Installation
+To install the app locally follow the steps below:
+
+1. Clone the repository.
+2. Open Bash from the app's directory.
+3. Install app's dependencies by executing `npm install` command.
+4. Start the app using `gulp start` command. This also builds the app before starting.
+5. Open app's home page in your browser ([http://localhost:5000/#/hom](http://localhost:5000/#/home)).
+
+# Testing
+The app has a couple of tests. To run the tests execute `gulp unit-test`.
