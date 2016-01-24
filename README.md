@@ -8,6 +8,12 @@ The app uses feature based structure for source code and file type based structu
 # Demo
 A demo is hosted on Heroku ([here](https://frozen-ravine-6349.herokuapp.com/#/home)).
 
+## Phone presentation
+![Phone presentation](demo/phone.png)
+
+## Tablet and larger screens presentation
+![Tablet size](demo/tablet.png)
+
 # Supported browsers
 
 ## Desktop
