@@ -4,7 +4,7 @@ The app is created with AngularJS and Bootstrap, and uses Gulp and Karma as buil
 LESS is used for CSS pre-processoring.
 
 # Demo
-A demo is hosted on Heruko ([here](https://frozen-ravine-6349.herokuapp.com/#/home)).
+A demo is hosted on Heroku ([here](https://frozen-ravine-6349.herokuapp.com/#/home)).
 
 # Installation
 To install the app localy follow the steps below:
