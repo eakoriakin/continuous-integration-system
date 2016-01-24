@@ -7,12 +7,15 @@ A demo can be found [here](https://frozen-ravine-6349.herokuapp.com/#/home).
 # Installation
 
 To install the app localy follow the steps below:
-1. Open Bash.
-2. Ldf
-3. Thb
-4. Xtnhst
+
+1. Clone the repository.
+2. Open Bash from the app's directory.
+3. Install app's dependencies by executing `npm install` command.
+4. Start the app using `gulp start` command. This also builds the app before starting.
+5. Open app's home page in your browser ([http://localhost:5000/#/hom](http://localhost:5000/#/home)).
 
 # Testing
+The app has a couple of tests. To run the tests execute `gulp unit-test`.
 
 # Supported browsers
 
