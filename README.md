@@ -19,7 +19,7 @@ A demo is hosted on Heroku ([here](https://frozen-ravine-6349.herokuapp.com/#/ho
 ![Phone presentation](demo/phone.png)
 
 ## Tablet and larger screens presentation
-![Tablet size](demo/tablet.png)
+![Tablet and larger screens presentation](demo/tablet.png)
 
 # Supported browsers
 
