@@ -1,0 +1,29 @@
+<div ng-class="blockCssClass">
+    <div class="test__left">
+        <div class="test__title">
+            <span class="test__icon glyphicon"></span> {{title}}
+        </div>
+        <div class="test__status">
+            <span class="test__percent">{{percent + '%'}}</span> {{statusText}}
+        </div>
+    </div>
+    <div ng-if="model.test.status === 'passed' || model.test.status === 'running'" class="test__right">
+        <div class="test__chart">
+            <canvas class="chart chart-pie" chart-data="chartData" chart-labels="chartLabels"
+                    chart-colours="chartColours"></canvas>
+        </div>
+        <div class="test__legend">
+            <div class="test__passed" title="Passed">
+                <span class="glyphicon glyphicon-stop"></span>
+                {{model.test.testsPassed}}
+            </div>
+            <div class="test__failed" title="Failed">
+                <span class="glyphicon glyphicon-stop"></span>
+                {{model.test.testsFailed}}
+            </div>
+            <div class="test__time" title="Spent time">
+                <span class="glyphicon glyphicon-time"></span> {{model.test.timeSpent | timeSpent}}
+            </div>
+        </div>
+    </div>
+</div>

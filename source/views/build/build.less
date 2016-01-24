@@ -1,0 +1,160 @@
+@import '../../variables';
+
+.build {
+    .display-flex;
+
+    &__title {
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+
+    &__time {
+        text-transform: lowercase;
+        font-size: 13px;
+        white-space: nowrap;
+    }
+
+    &_pending {
+        .build__icon {
+            background-color: @color-warning;
+        }
+
+        .build__icon:before {
+            content: '\e234';
+        }
+    }
+
+    &_passed {
+        .build__icon {
+            background-color: @color-success;
+        }
+
+        .build__icon:before {
+            content: '\e013';
+        }
+    }
+
+    &_failed {
+        .build__icon {
+            background-color: @color-danger;
+        }
+
+        .build__icon:before {
+            content: '\e014';
+        }
+    }
+
+    &_running {
+        .build__icon {
+            background-color: @color-primary;
+        }
+
+        .build__icon:before {
+            content: '\e031';
+        }
+    }
+
+    &__icon {
+        color: #ffffff;
+        border-radius: 4px;
+        padding: 3px;
+        font-size: 12px;
+    }
+
+    &__build {
+        .box-sizing-border-box;
+        width: 33.3%;
+        padding: 15px;
+    }
+
+    &__release, &__debug {
+        .box-sizing-border-box;
+        width: 33.3%;
+        padding: 15px;
+        text-align: center;
+
+        .glyphicon-folder-open {
+            display: block;
+            font-size: 24px;
+            margin-bottom: 5px;
+        }
+    }
+
+    &__release {
+        .glyphicon-folder-open {
+            color: @gray-light;
+        }
+
+        .glyphicon-save {
+            margin-right: 5px;
+        }
+    }
+
+    &__debug .glyphicon {
+        color: @color-success;
+    }
+
+    &__logs-url {
+        display: block;
+        margin-top: 10px;
+        white-space: nowrap;
+    }
+}
+
+.grid__row_pending, .grid__row_running, .grid__row_failed {
+    .build__release-url {
+        cursor: default;
+        color: @gray-dark;
+    }
+}
+
+.grid__row_passed .build__release .glyphicon-folder-open {
+    color: @color-success;
+}
+
+.grid__row_failed .build__release .glyphicon-folder-open {
+    color: @color-danger;
+}
+
+@media (min-width: @screen-small) {
+    .build {
+        &__title {
+            margin-bottom: 0;
+            display: inline-block;
+        }
+
+        &__time {
+            display: inline-block;
+            margin-left: 5px;
+        }
+
+        &__release, &__debug {
+            text-align: left;
+        }
+
+        .glyphicon-folder-open {
+            display: inline-block;
+            font-size: 16px;
+            margin-bottom: 0;
+            margin-right: 5px;
+        }
+
+        &__logs-url {
+            display: inline-block;
+            margin-top: 0;
+            margin-left: 10px;
+        }
+
+        .glyphicon-save {
+            font-size: 16px;
+        }
+
+        &__debug {
+            width: 16.6%;
+        }
+
+        &__release {
+            width: 49.9%;
+        }
+    }
+}

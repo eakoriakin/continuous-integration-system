@@ -1,0 +1,145 @@
+@import '../../variables';
+
+@chart-width: 136px;
+@chart-height: 68px;
+
+.test {
+    .display-flex;
+
+    &__left, &__right {
+        .box-sizing-border-box;
+        padding: 15px;
+        min-height: 98px;
+    }
+
+    &__left {
+        width: 44%;
+    }
+
+    &__right {
+        width: 56%;
+        position: relative;
+    }
+
+    &__title {
+        font-weight: bold;
+        text-transform: capitalize;
+        white-space: nowrap;
+        margin-bottom: 10px;
+    }
+
+    &__icon {
+        color: #ffffff;
+        border-radius: 4px;
+        padding: 3px;
+        font-size: 12px;
+    }
+
+    &__status {
+        font-weight: bold;
+        font-size: 16px;
+        white-space: nowrap;
+    }
+
+    &__percent {
+        font-size: 22px;
+    }
+
+    &__chart, .chart {
+        width: @chart-width;
+        height: @chart-height;
+        max-width: @chart-width;
+        max-height: @chart-height;
+    }
+
+    .chart-container {
+        margin-left: -34px;
+    }
+
+    &__legend {
+        position: absolute;
+        top: 20px;
+        left: 96px;
+    }
+
+    &__passed, &__failed {
+        margin-bottom: 5px;
+        white-space: nowrap;
+
+        .glyphicon-stop {
+            font-size: 10px;
+            position: relative;
+            top: 0;
+        }
+    }
+
+    &__passed .glyphicon-stop {
+        color: @color-success;
+    }
+
+    &__failed .glyphicon-stop {
+        color: @color-warning;
+    }
+
+    &__time {
+        text-transform: lowercase;
+        font-size: 13px;
+        white-space: nowrap;
+    }
+
+    &_pending {
+        .test__icon {
+            background-color: @color-warning;
+        }
+
+        .test__icon:before {
+            content: '\e234';
+        }
+
+        .test__status {
+            color: @color-warning;
+        }
+    }
+
+    &_passed {
+        .test__icon {
+            background-color: @color-success;
+        }
+
+        .test__icon:before {
+            content: '\e013';
+        }
+
+        .test__status {
+            color: @color-success;
+        }
+    }
+
+    &_failed {
+        .test__icon {
+            background-color: @color-danger;
+        }
+
+        .test__icon:before {
+            content: '\e014';
+        }
+
+        .test__status {
+            color: @color-danger;
+        }
+    }
+
+    &_running {
+        .test__icon {
+            background-color: @color-primary;
+        }
+
+        .test__icon:before {
+            content: '\e031';
+        }
+
+        .test__status {
+            color: @color-primary;
+        }
+    }
+}

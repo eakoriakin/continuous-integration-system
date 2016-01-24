@@ -1,0 +1,29 @@
+<div ng-class="blockCssClass">
+    <div class="process__inner">
+        <div class="process__background"></div>
+        <div class="process__build-background"></div>
+        <div class="process__unit-background"></div>
+        <div class="process__e2e-background"></div>
+        <div class="progress">
+            <div class="progress-bar" role="progressbar" aria-valuenow="{{totalPercent}}"
+                 aria-valuemin="0"
+                 aria-valuemax="100"
+                 ng-style="{width: totalPercent + '%'}">
+            </div>
+        </div>
+        <div class="process__build">
+            <span class="glyphicon"></span>
+        </div>
+        <div class="process__unit">
+            <span class="glyphicon"></span>
+        </div>
+        <div class="process__e2e">
+            <span class="glyphicon"></span>
+        </div>
+    </div>
+    <div class="process__labels">
+        <div class="process__build-label">Build</div>
+        <div class="process__unit-label">Unit Test</div>
+        <div class="process__e2e-label">E2E Test</div>
+    </div>
+</div>

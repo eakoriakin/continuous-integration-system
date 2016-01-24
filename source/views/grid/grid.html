@@ -1,0 +1,39 @@
+<div class="grid">
+    <div class="grid__header">
+        <div class="grid__heading grid__heading_change-list">Change List</div>
+        <div class="grid__heading">Owner</div>
+        <div class="grid__heading">Time Started</div>
+        <div class="grid__heading grid__heading_build">Build</div>
+        <div class="grid__heading grid__heading_unit">Unit Test</div>
+        <div class="grid__heading grid__heading_e2e">E2E Test</div>
+    </div>
+    <div ng-class="rowCssClass" ng-controller="gridItemController" ng-repeat="run in runs | orderBy:'-timeStarted'">
+        <div class="grid__top">
+            <div class="grid__inner">
+                <div class="grid__cell grid__cell_change-list">
+                    {{run.changeList}}
+                </div>
+                <div class="grid__cell grid__cell_owner">
+                    {{run.owner}}
+                </div>
+                <div class="grid__cell grid__cell_time">
+                    <time model="time"></time>
+                </div>
+                <div class="grid__cell grid__cell_process">
+                    <process model="run"></process>
+                </div>
+            </div>
+        </div>
+        <div class="grid__bottom">
+            <div class="grid__cell grid__cell_build">
+                <build model="run"></build>
+            </div>
+            <div class="grid__cell grid__cell_unit">
+                <test model="unitTest"></test>
+            </div>
+            <div class="grid__cell grid__cell_e2e">
+                <test model="e2eTest"></test>
+            </div>
+        </div>
+    </div>
+</div>

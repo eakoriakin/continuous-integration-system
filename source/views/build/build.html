@@ -1,0 +1,22 @@
+<div ng-class="'build build_' + model.build.status">
+    <div class="build__build">
+        <div class="build__title">
+            <span class="build__icon glyphicon"></span> Build
+        </div>
+        <div class="build__time" ng-if="model.build.timeStopped !== null">
+            <span class="glyphicon glyphicon-time"></span>
+            {{model.build.timeStopped | date : 'h:mm a'}}
+        </div>
+    </div>
+    <div class="build__debug">
+        <span class="glyphicon glyphicon-folder-open"></span>
+        <a href="#">Debug</a>
+    </div>
+    <div class="build__release">
+        <span class="glyphicon glyphicon-folder-open"></span>
+        <a class="build__release-url" href="#">Release</a>
+        <a class="build__logs-url" href="#" class="get-logs" ng-if="model.status() === 'failed'">
+            <span class="glyphicon glyphicon-save"></span>Get logs
+        </a>
+    </div>
+</div>

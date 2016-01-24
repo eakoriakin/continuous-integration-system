@@ -1,0 +1,29 @@
+@import 'variables';
+
+// Base.
+body {
+    font: 14px 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+a:link, a:visited, a:active {
+    font-size: 13px;
+    text-decoration: underline;
+}
+
+// Page.
+.page {
+    color: @gray;
+
+    &__inner {
+        width: 100%;
+        max-width: 900px;
+        margin: 0 auto 15px auto;
+    }
+}
+
+// Header.
+.header {
+    margin-bottom: 15px;
+    border-bottom: 1px solid @gray-light;
+    background-color: @gray-lightest;
+}

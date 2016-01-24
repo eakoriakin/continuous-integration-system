@@ -1,0 +1,166 @@
+@import '../../variables';
+
+.process {
+    width: 100%;
+
+    &__inner {
+        position: relative;
+        height: 36px;
+    }
+
+    &__background {
+        position: relative;
+        background-color: @gray-lighter;
+        width: 100%;
+        height: 10px;
+        top: 13px;
+        border-radius: 5px;
+    }
+
+    &__build-background, &__unit-background, &__e2e-background {
+        position: absolute;
+        width: 36px;
+        height: 36px;
+        background-color: @gray-lighter;
+        top: 0;
+        border-radius: 18px;
+    }
+
+    &__build-background {
+        left: 0;
+    }
+
+    &__unit-background {
+        left: 50%;
+        margin-left: -18px;
+    }
+
+    &__e2e-background {
+        right: 0;
+    }
+
+    &__build, &__unit, &__e2e {
+        width: 26px;
+        height: 26px;
+        border-radius: 13px;
+        position: absolute;
+        top: 5px;
+    }
+
+    &__build {
+        left: 5px;
+    }
+
+    &__unit {
+        left: 50%;
+        margin-left: -13px;
+    }
+
+    &__e2e {
+        right: 5px;
+    }
+
+    &:not(&_unit_running):not(&_unit_passed):not(&_unit_failed) &__unit {
+        display: none;
+    }
+
+    &:not(&_e2e_running):not(&_e2e_passed):not(&_e2e_failed) &__e2e {
+        display: none;
+    }
+
+    .glyphicon {
+        position: absolute;
+        color: #ffffff;
+        display: block;
+        width: 14px;
+        height: 14px;
+        top: 6px;
+        left: 6px;
+    }
+
+    .progress {
+        .box-shadow-none;
+        height: 4px;
+        position: relative;
+        top: 6px;
+        background: none;
+        margin-bottom: 0;
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+
+    &__labels {
+        .display-flex;
+        margin-top: 10px;
+    }
+
+    &__build-label, &__unit-label, &__e2e-label {
+        .box-sizing-border-box;
+        width: 33.3%;
+        font-size: 13px;
+    }
+
+    &__unit-label {
+        text-align: center;
+    }
+
+    &__e2e-label {
+        text-align: right;
+    }
+
+    &_build_pending &__build, &_unit_pending &__unit, &_e2e_pending &__e2e {
+        .glyphicon:before {
+            content: '\e234';
+        }
+    }
+
+    &_build_passed &__build, &_unit_passed &__unit, &_e2e_passed &__e2e {
+        .glyphicon:before {
+            content: '\e013';
+        }
+    }
+
+    &_build_running &__build, &_unit_running &__unit, &_e2e_running &__e2e {
+        .glyphicon:before {
+            content: '\e031';
+        }
+    }
+
+    &_build_failed &__build, &_unit_failed &__unit, &_e2e_failed &__e2e {
+        .glyphicon:before {
+            content: '\e014';
+        }
+    }
+
+    &_pending {
+        .process__build, .process__unit, .process__e2e {
+            background-color: @color-warning;
+        }
+    }
+
+    &_running {
+        .process__build, .process__unit, .process__e2e, .progress-bar {
+            background-color: @color-primary;
+        }
+    }
+
+    &_passed {
+        .process__build, .process__unit, .process__e2e, .progress-bar {
+            background-color: @color-success;
+        }
+    }
+
+    &_failed {
+        .process__build, .process__unit, .process__e2e, .progress-bar {
+            background-color: @color-danger;
+        }
+    }
+}
+
+@media (min-width: @screen-small) {
+    .process {
+        &__labels {
+            display: none;
+        }
+    }
+}
