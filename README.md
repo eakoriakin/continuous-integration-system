@@ -1,5 +1,5 @@
 # Table of contents
-* [Responsive app sample](#responsive-app-sample)
+* [Description](#description)
 * [Demo](#demo)
 * [Supported browsers](#supported-browsers)
 * [Installation](#installation)
