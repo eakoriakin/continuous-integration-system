@@ -1,13 +1,15 @@
 # Responsive app sample
-This is a sample of a responsive single-page web app which represents a continuous integration system based on changelists.
-The app is created with AngularJS and Bootstrap, and uses Gulp and Karma as building and testing utilities.
-LESS is used for CSS pre-processoring.
+This is a sample of a small responsive single-page web app which represents a continuous integration system based on changelists.
+Although the app is small, it has complex responsive HTML and CSS.
+The app is created with AngularJS and Bootstrap, uses Gulp and Karma as building and testing utilities, and LESS as a CSS pre-processor.
+
+The app uses feature based structure for source code and file type based structure for a build version, and can be used as a starting point for your own projects.
 
 # Demo
 A demo is hosted on Heroku ([here](https://frozen-ravine-6349.herokuapp.com/#/home)).
 
 # Installation
-To install the app localy follow the steps below:
+To install the app locally follow the steps below:
 
 1. Clone the repository.
 2. Open Bash from the app's directory.
