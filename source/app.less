@@ -10,13 +10,18 @@ a:link, a:visited, a:active {
     text-decoration: underline;
 }
 
+h1 {
+    padding: 20px 0 15px 0;
+    margin: 0;
+}
+
 // Page.
 .page {
     color: @gray;
 
     &__inner {
         width: 100%;
-        max-width: 900px;
+
         margin: 0 auto 15px auto;
     }
 }
@@ -26,4 +31,13 @@ a:link, a:visited, a:active {
     margin-bottom: 15px;
     border-bottom: 1px solid @gray-light;
     background-color: @gray-lightest;
+
+    &__inner {
+        .container;
+    }
+}
+
+// Content.
+.content {
+    .container;
 }
