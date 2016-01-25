@@ -77,8 +77,7 @@
             }
 
             .grid__bottom {
-                .display-flex;
-                border-top: 1px solid @gray-light;
+                max-height: 298px;
             }
         }
     }
@@ -99,8 +98,11 @@
     }
 
     &__bottom {
-        display: none;
+        .display-flex;
         flex-wrap: wrap;
+        max-height: 0;
+        transition: max-height 0.3s;
+        overflow: hidden;
     }
 
     &__cell {
@@ -167,6 +169,14 @@
             }
             &_e2e {
                 text-align: right;
+            }
+        }
+
+        &__row {
+            &_is-opened {
+                .grid__bottom {
+                    max-height: 146px;
+                }
             }
         }
     }

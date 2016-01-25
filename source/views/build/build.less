@@ -1,7 +1,11 @@
 @import '../../variables';
 
 .build {
-    .display-flex;
+    border-top: 1px solid @gray-light;
+
+    &__inner {
+        .display-flex;
+    }
 
     &__title {
         font-weight: bold;
