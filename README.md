@@ -13,7 +13,7 @@ The app is created with AngularJS and Bootstrap, uses Gulp and Karma as building
 The app uses feature based structure for source code and file type based structure for a build version, and can be used as a starting point for your own projects.
 
 # Demo
-A demo is hosted on Heroku ([here](https://frozen-ravine-6349.herokuapp.com/#/home)).
+A demo is hosted on Heroku ([https://continuous-integration-system.herokuapp.com](https://continuous-integration-system.herokuapp.com)).
 
 ## Phone presentation
 ![Phone presentation](demo/phone.png)
