@@ -1,20 +1,20 @@
 {
     "version": "1.0.0",
-    "name": "responsive-app-sample",
-    "title": "Responsive app sample",
-    "description": "A sample of a small responsive single-page web app which represents a continuous integration system based on changelists.",
+    "name": " continuous-integration-system",
+    "title": "Continuous integration system",
+    "description": "A part of small responsive single-page web app, which represents a continuous integration system based on changelists.",
     "author": {
         "name": "Evgenii Koriakin",
         "url": "https://github.com/eakoryakin"
     },
-    "main": "index.js",
+    "main": "server.js",
     "scripts": {
-        "start": "node index.js"
+        "start": "node server.js"
     },
     "engines": {
         "node": "0.12.7"
     },
-    "repository": "git@heroku.com:frozen-ravine-6349.git",
+    "repository": "git@github.com:eakoryakin/continuous-integration-system.git",
     "license": "(MIT OR Apache-2.0)",
     "dependencies": {
         "express": "4.13.3",

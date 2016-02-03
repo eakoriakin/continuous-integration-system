@@ -6,7 +6,7 @@
 * [Testing](#testing)
 
 # Description
-This is a sample of a small responsive single-page web app which represents a continuous integration system based on changelists.
+A part of small responsive single-page web app which represents a continuous integration system based on changelists.
 Although the app is small, it has complex responsive HTML and CSS.
 The app is created with AngularJS and Bootstrap, uses Gulp and Karma as building and testing utilities, and LESS as a CSS pre-processor.
 
